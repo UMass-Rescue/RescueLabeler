@@ -81,22 +81,23 @@ jobs:
       uses: codecov/codecov-action@v1
       with:
         fail_ci_if_error: true
-  #
-  # autodoc:
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     matrix:
-  #       python-version: [ 3.7 ]
-  #
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - name: Set up Python ${{ matrix.python-version }}
-  #   - name: "Sphinx autodoc"
-  #     run: |
-  #       pip install -U sphinx sphinx-autoapi
-  #       sphinx-build docs public -b dirhtml
-  #   - name: Deploy Docs
-  #     uses: peaceiris/actions-gh-pages@v3
-  #     with:
-  #       github_token: ${{ secrets.GITHUB_TOKEN }}
-  #       publish_dir: public
+
+  autodoc:
+    needs: test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ 3.7 ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+    - name: "Sphinx autodoc"
+      run: |
+        pip install -U sphinx sphinx-autoapi
+        sphinx-build docs public -b dirhtml
+    - name: Deploy Docs
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: public
