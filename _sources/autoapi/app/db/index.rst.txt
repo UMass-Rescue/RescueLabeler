@@ -23,6 +23,7 @@ Classes
 .. autoapisummary::
 
    app.db.Base
+   app.db.DBContextManager
 
 
 
@@ -32,7 +33,6 @@ Functions
 .. autoapisummary::
 
    app.db.init_db
-   app.db.get_db
 
 
 .. class:: Base
@@ -68,8 +68,13 @@ Functions
    Initialize tables with base metadata
 
 
-.. function:: get_db() -> Generator
+.. class:: DBContextManager
 
-   Return a session instance generator
+
+   .. method:: __enter__(self)
+
+
+   .. method:: __exit__(self, exc_type, exc_value, traceback)
+
 
 

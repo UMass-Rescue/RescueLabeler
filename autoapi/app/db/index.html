@@ -55,6 +55,9 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#app.db.Base" title="app.db.Base"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Base</span></code></a></p></td>
 <td><p>SqlAlchemy Base with override for tablename generation</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.db.DBContextManager" title="app.db.DBContextManager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DBContextManager</span></code></a></p></td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -68,9 +71,6 @@
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#app.db.init_db" title="app.db.init_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_db</span></code></a>() → None</p></td>
 <td><p>Initialize tables with base metadata</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#app.db.get_db" title="app.db.get_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_db</span></code></a>() → Generator</p></td>
-<td><p>Return a session instance generator</p></td>
 </tr>
 </tbody>
 </table>
@@ -111,10 +111,19 @@
 <dd><p>Initialize tables with base metadata</p>
 </dd></dl>
 
-<dl class="py function">
-<dt id="app.db.get_db">
-<code class="sig-prename descclassname">app.db.</code><code class="sig-name descname">get_db</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Generator<a class="headerlink" href="#app.db.get_db" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a session instance generator</p>
+<dl class="py class">
+<dt id="app.db.DBContextManager">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.</code><code class="sig-name descname">DBContextManager</code><a class="headerlink" href="#app.db.DBContextManager" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="app.db.DBContextManager.__enter__">
+<code class="sig-name descname">__enter__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.db.DBContextManager.__enter__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.db.DBContextManager.__exit__">
+<code class="sig-name descname">__exit__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">exc_type</span></em>, <em class="sig-param"><span class="n">exc_value</span></em>, <em class="sig-param"><span class="n">traceback</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.db.DBContextManager.__exit__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
