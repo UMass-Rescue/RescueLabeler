@@ -1,1 +1,1 @@
-uvicorn labeler_api.main:app --reload
+uvicorn app.main:app --reload

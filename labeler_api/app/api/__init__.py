@@ -12,9 +12,11 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 @router.get("/")
 async def home():
+    """Default home route"""
     return {"msg": "RescueLab Labeler"}
 
 
 @router.get("/items/")
 async def read_items(token: str = Depends(oauth2_scheme)):
+    """TODO update"""
     return {"token": token}

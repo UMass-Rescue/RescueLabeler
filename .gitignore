@@ -8,3 +8,4 @@ junit
 public
 
 *.egg-info
+logs/

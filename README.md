@@ -8,10 +8,26 @@
 
 ## API
 
-Docker build commands
+Non Docker build command
 
 ```bash
-docker build -t labeler_api:latest .
+source labeler_api/run_debug_app.sh
+```
+
+Docker build commands
+
+API Compose
+
+```bash
+docker-compose -f docker-compose.api.yml build
+docker-compose -f docker-compose.api.yml up
+```
+
+
+API Standalone Container:
+
+```bash
+docker build -t labeler_api:latest labeler_api
 docker run -p 80:80 labeler_api
 ```
 

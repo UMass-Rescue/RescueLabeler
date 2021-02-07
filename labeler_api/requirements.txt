@@ -1,0 +1,8 @@
+fastapi
+python-multipart
+uvicorn
+sqlalchemy
+sqlalchemy_utils
+typing
+passlib
+psycopg2

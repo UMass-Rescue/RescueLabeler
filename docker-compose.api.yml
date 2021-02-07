@@ -1,0 +1,19 @@
+# THIS FILE PROVIDES BUILD CONFIG FOR LABELER API
+
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  api:
+    build: labeler_api/
+    environment:
+      - PG_USER=postgres
+      - PG_PASS=postgres
+    ports:
+      - "80:80"
+    depends_on:
+      - db
