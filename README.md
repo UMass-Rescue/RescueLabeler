@@ -6,11 +6,22 @@
 
 
 
-API
+## API
 
-CLI
+Docker build commands
 
-Client Web app
+```bash
+docker build -t labeler_api:latest .
+docker run -p 80:80 labeler_api
+```
+
+## CLI
+
+Todo...
+
+## Client Web app
+
+Todo...
 
 
 ## Author

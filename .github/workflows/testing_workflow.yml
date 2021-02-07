@@ -43,6 +43,8 @@ jobs:
       run: |
         black --check .
     - name: Test with pytest
+      env:
+        PYTHONPATH: $PWD/labeler_api/labeler_api
       run: |
         pip install -r test/requirements.txt
         pytest test --cov=. --cov-report html
