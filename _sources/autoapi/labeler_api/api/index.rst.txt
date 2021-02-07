@@ -1,0 +1,37 @@
+:mod:`labeler_api.api`
+======================
+
+.. py:module:: labeler_api.api
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   labeler_api.api.home
+   labeler_api.api.read_items
+
+
+.. data:: router
+   
+
+   
+
+.. data:: oauth2_scheme
+   
+
+   
+
+.. function:: home()
+   :async:
+
+
+.. function:: read_items(token: str = Depends(oauth2_scheme))
+   :async:
+
+
