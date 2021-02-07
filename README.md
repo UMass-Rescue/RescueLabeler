@@ -20,6 +20,11 @@ API Compose
 
 ```bash
 docker-compose -f docker-compose.api.yml build
+
+# Testing
+docker-compose -f docker-compose.api.yml run
+
+# Deployment
 docker-compose -f docker-compose.api.yml up
 ```
 
@@ -28,7 +33,7 @@ API Standalone Container:
 
 ```bash
 docker build -t labeler_api:latest labeler_api
-docker run -p 80:80 labeler_api
+docker run -it -p 80:80 labeler_api
 ```
 
 ## CLI

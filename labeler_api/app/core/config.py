@@ -2,7 +2,7 @@ import os
 
 PROJECT_NAME = os.getenv("PROJECT_NAME", "RescueLabeler")  # Project Name
 VERSION = os.getenv("VERSION", "0.1.0")  # Current Version
-DEBUG = True  # Run App in debug mode
+DEBUG = os.getenv("DEBUG", "True") == "True"  # Run App in debug mode if True
 
 API_PREFIX = os.getenv("API_PREFIX", "")  # Endpoint prefix for all endpoints
 

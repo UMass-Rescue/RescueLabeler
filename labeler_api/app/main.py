@@ -8,10 +8,6 @@ from app import setup_logging
 logger = setup_logging("rescue-labeler")
 
 
-# Initalize Database
-init_db()
-
-
 def get_application() -> FastAPI:
     """FastAPI app generator with config parameters
 
@@ -22,6 +18,9 @@ def get_application() -> FastAPI:
     application = FastAPI(
         title=config.PROJECT_NAME, debug=config.DEBUG, version=config.VERSION
     )
+
+    # Initalize Database
+    init_db()
 
     application.add_event_handler("shutdown", create_stop_app_handler(application))
 

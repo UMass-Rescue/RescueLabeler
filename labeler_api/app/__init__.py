@@ -19,7 +19,7 @@ def setup_logging(logger_name, log_file="rescue_labeler.log", log_level="INFO"):
     stdout_handler = logging.StreamHandler(sys.stdout)
 
     log_dir = os.path.join(config.LOG_DIR)
-    if not os.path.isdir(log_dir):
+    if not os.path.exists(log_dir):
         os.makedirs(log_dir)
     base_filename = os.path.join(log_dir, log_file)
     file_handler = TimedRotatingFileHandler(base_filename, when="midnight")

@@ -3,17 +3,34 @@
 version: "3.9"
 
 services:
-  db:
+  labeler_db:
     image: postgres
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-  api:
+    ports:
+      - "54320:5432"
+    networks:
+      - labeler_network
+  labeler_api:
     build: labeler_api/
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     environment:
       - PG_USER=postgres
       - PG_PASS=postgres
+      - PG_HOST=labeler_db
+      - PG_PORT=5432
+      - DEBUG=False
     ports:
       - "80:80"
     depends_on:
-      - db
+      - labeler_db
+    networks:
+      - labeler_network
+
+
+networks:
+    labeler_network:
+      driver_opts:
+        encrypted: ""
