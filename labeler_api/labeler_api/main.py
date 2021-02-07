@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from api import router as api_router
-from core import config
+from labeler_api.api import router as api_router
+from labeler_api.core import config
 
 
 def get_application() -> FastAPI:
