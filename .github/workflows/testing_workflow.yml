@@ -38,43 +38,43 @@ jobs:
         run: |
           black --check .
 
-  # test:
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     matrix:
-  #       python-version: [ 3.7 ]
-  #   services:
-  #     # Label used to access the service container
-  #     postgres:
-  #       # Docker Hub image
-  #       image: postgres
-  #       # Provide the password for postgres
-  #       env:
-  #         POSTGRES_PASSWORD: postgres
-  #       # Set health checks to wait until postgres has started
-  #       options: >-
-  #         --health-cmd pg_isready
-  #         --health-interval 10s
-  #         --health-timeout 5s
-  #         --health-retries 5
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - name: Set up Python ${{ matrix.python-version }}
-  #   - name: Test with pytest
-  #     run: |
-  #       pip install -e labeler_api
-  #       pip install  pytest pytest-cov
-  #       python -m pip install --upgrade pip
-  #       pip install -r test/requirements.txt
-  #       pytest test --cov=. --cov-report html
-  #     env:
-  #       PG_HOST: postgres
-  #       PG_PORT: 5432
-  #       PG_PASS: postgres
-  #   - name: "Upload coverage to Codecov"
-  #     uses: codecov/codecov-action@v1
-  #     with:
-  #       fail_ci_if_error: true
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ 3.7 ]
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        # Provide the password for postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+    - name: Test with pytest
+      run: |
+        pip install -e labeler_api
+        pip install  pytest pytest-cov
+        python -m pip install --upgrade pip
+        pip install -r test/requirements.txt
+        pytest test --cov=. --cov-report html
+      env:
+        PG_HOST: postgres
+        PG_PORT: 5432
+        PG_PASS: postgres
+    - name: "Upload coverage to Codecov"
+      uses: codecov/codecov-action@v1
+      with:
+        fail_ci_if_error: true
   #
   # autodoc:
   #   runs-on: ubuntu-latest
