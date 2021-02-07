@@ -1,14 +1,11 @@
 from fastapi.testclient import TestClient
 from app.main import get_application
-from sqlalchemy_utils import database_exists, drop_database
+from sqlalchemy_utils import database_exists
 from app.db import engine
 
 
 def test_db_shutdown():
-
-    # Clear any existing db
-    if database_exists(engine.url):
-        drop_database(engine.url)
+    # Start with no db
     assert not database_exists(engine.url)
 
     # Start app
