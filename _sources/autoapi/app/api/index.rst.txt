@@ -1,0 +1,41 @@
+:mod:`app.api`
+==============
+
+.. py:module:: app.api
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.api.home
+   app.api.read_items
+
+
+.. data:: router
+   
+
+   
+
+.. data:: oauth2_scheme
+   
+
+   
+
+.. function:: home()
+   :async:
+
+   Default home route
+
+
+.. function:: read_items(token: str = Depends(oauth2_scheme))
+   :async:
+
+   TODO update
+
+

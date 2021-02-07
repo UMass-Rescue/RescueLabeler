@@ -1,0 +1,11 @@
+:mod:`app.db.base`
+==================
+
+.. py:module:: app.db.base
+
+.. autoapi-nested-parse::
+
+   This module imports the models assigning them to the Base
+
+
+

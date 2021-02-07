@@ -18,11 +18,46 @@ Module Contents
    
 
 .. data:: DEBUG
-   :annotation: = False
+   :annotation: = True
 
    
 
 .. data:: API_PREFIX
+   
+
+   
+
+.. data:: LOG_DIR
+   
+
+   
+
+.. data:: PG_USER
+   
+
+   
+
+.. data:: PG_PASS
+   
+
+   
+
+.. data:: PG_HOST
+   
+
+   
+
+.. data:: PG_PORT
+   
+
+   
+
+.. data:: PG_DBNAME
+   
+
+   
+
+.. data:: SQLALCHEMY_DATABASE_URI
    
 
    

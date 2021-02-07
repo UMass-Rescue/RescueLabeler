@@ -1,0 +1,49 @@
+:mod:`app`
+==========
+
+.. py:module:: app
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   api/index.rst
+   db/index.rst
+   models/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   main/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.setup_logging
+
+
+.. function:: setup_logging(logger_name, log_file='rescue_labeler.log', log_level='INFO')
+
+   Setup logging with rotating file handler
+
+   :param str logger_name: name of logger, 'rescue-labeler'
+   :param str log_file: log file name, default
+   :param str log_level: Logger output level, default INFO
+   :return: logger
+   :rtype: logger
+
+

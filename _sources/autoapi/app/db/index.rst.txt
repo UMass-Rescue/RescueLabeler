@@ -1,0 +1,75 @@
+:mod:`app.db`
+=============
+
+.. py:module:: app.db
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   base/index.rst
+   base_class/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.db.Base
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   app.db.init_db
+   app.db.get_db
+
+
+.. class:: Base
+
+   SqlAlchemy Base with override for tablename generation
+
+   .. attribute:: __name__
+      :annotation: :str
+
+      
+
+   .. method:: __tablename__(cls) -> str
+
+
+
+.. data:: logger
+   
+
+   
+
+.. data:: engine
+   
+
+   
+
+.. data:: SessionLocal
+   
+
+   
+
+.. function:: init_db() -> None
+
+   Initialize tables with base metadata
+
+
+.. function:: get_db() -> Generator
+
+   Return a session instance generator
+
+

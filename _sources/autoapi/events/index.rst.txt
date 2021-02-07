@@ -1,0 +1,26 @@
+:mod:`events`
+=============
+
+.. py:module:: events
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   events.create_stop_app_handler
+
+
+.. data:: logger
+   
+
+   
+
+.. function:: create_stop_app_handler(app: fastapi.FastAPI) -> Callable
+
+

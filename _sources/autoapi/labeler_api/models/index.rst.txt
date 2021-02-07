@@ -1,6 +1,0 @@
-:mod:`labeler_api.models`
-=========================
-
-.. py:module:: labeler_api.models
-
-

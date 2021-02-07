@@ -1,0 +1,31 @@
+:mod:`app.db.base_class`
+========================
+
+.. py:module:: app.db.base_class
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.db.base_class.Base
+
+
+
+.. class:: Base
+
+   SqlAlchemy Base with override for tablename generation
+
+   .. attribute:: __name__
+      :annotation: :str
+
+      
+
+   .. method:: __tablename__(cls) -> str
+
+
+

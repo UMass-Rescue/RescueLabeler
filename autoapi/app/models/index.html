@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>app.models &#8212; RescueLab Labeler  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-app.models">
+<span id="app-models"></span><h1><a class="reference internal" href="#module-app.models" title="app.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">app.models</span></code></a><a class="headerlink" href="#module-app.models" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.models.Base" title="app.models.Base"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Base</span></code></a></p></td>
+<td><p>SqlAlchemy Base with override for tablename generation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.models.LabelUser" title="app.models.LabelUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelUser</span></code></a></p></td>
+<td><p>Primary api user</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt id="app.models.Base">
+<em class="property">class </em><code class="sig-prename descclassname">app.models.</code><code class="sig-name descname">Base</code><a class="headerlink" href="#app.models.Base" title="Permalink to this definition">¶</a></dt>
+<dd><p>SqlAlchemy Base with override for tablename generation</p>
+<dl class="py attribute">
+<dt id="app.models.Base.__name__">
+<code class="sig-name descname">__name__</code><em class="property"> :str</em><a class="headerlink" href="#app.models.Base.__name__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="app.models.Base.__tablename__">
+<code class="sig-name descname">__tablename__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cls</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#app.models.Base.__tablename__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.models.LabelUser">
+<em class="property">class </em><code class="sig-prename descclassname">app.models.</code><code class="sig-name descname">LabelUser</code><a class="headerlink" href="#app.models.LabelUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../db/base_class/#app.db.base_class.Base" title="app.db.base_class.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.base_class.Base</span></code></a></p>
+<p>Primary api user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attr int id</dt>
+<dd class="field-odd"><p>row id, unique</p>
+</dd>
+<dt class="field-even">Attr str username</dt>
+<dd class="field-even"><p>first name of user</p>
+</dd>
+<dt class="field-odd">Attr str full_name</dt>
+<dd class="field-odd"><p>last name of user</p>
+</dd>
+<dt class="field-even">Attr str email</dt>
+<dd class="field-even"><p>user email</p>
+</dd>
+<dt class="field-odd">Attr password password</dt>
+<dd class="field-odd"><p>hashed user password</p>
+</dd>
+<dt class="field-even">Attr bool is_superuser</dt>
+<dd class="field-even"><p>boolean denoting superuser, false by default</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="app.models.LabelUser.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#app.models.LabelUser.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelUser.username">
+<code class="sig-name descname">username</code><a class="headerlink" href="#app.models.LabelUser.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelUser.full_name">
+<code class="sig-name descname">full_name</code><a class="headerlink" href="#app.models.LabelUser.full_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelUser.email">
+<code class="sig-name descname">email</code><a class="headerlink" href="#app.models.LabelUser.email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelUser.password">
+<code class="sig-name descname">password</code><a class="headerlink" href="#app.models.LabelUser.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelUser.is_superuser">
+<code class="sig-name descname">is_superuser</code><a class="headerlink" href="#app.models.LabelUser.is_superuser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../">RescueLab Labeler</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Jagath Jai Kumar.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/autoapi/app/models/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

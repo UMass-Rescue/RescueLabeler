@@ -1,0 +1,76 @@
+:mod:`app.models`
+=================
+
+.. py:module:: app.models
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.models.Base
+   app.models.LabelUser
+
+
+
+.. class:: Base
+
+   SqlAlchemy Base with override for tablename generation
+
+   .. attribute:: __name__
+      :annotation: :str
+
+      
+
+   .. method:: __tablename__(cls) -> str
+
+
+
+.. class:: LabelUser
+
+   Bases: :class:`app.db.base_class.Base`
+
+   Primary api user
+
+   :attr int id: row id, unique
+   :attr str username: first name of user
+   :attr str full_name: last name of user
+   :attr str email: user email
+   :attr password password: hashed user password
+   :attr bool is_superuser: boolean denoting superuser, false by default
+
+   .. attribute:: id
+      
+
+      
+
+   .. attribute:: username
+      
+
+      
+
+   .. attribute:: full_name
+      
+
+      
+
+   .. attribute:: email
+      
+
+      
+
+   .. attribute:: password
+      
+
+      
+
+   .. attribute:: is_superuser
+      
+
+      
+
+

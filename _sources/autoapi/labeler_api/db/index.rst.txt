@@ -1,6 +1,0 @@
-:mod:`labeler_api.db`
-=====================
-
-.. py:module:: labeler_api.db
-
-
