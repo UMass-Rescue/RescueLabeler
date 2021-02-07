@@ -18,6 +18,11 @@ Functions
 
 .. function:: get_application() -> fastapi.FastAPI
 
+   FastAPI app generator with config parameters
+
+   :return: FastAPI object
+   :rtype: FastAPI
+
 
 .. data:: app
    
