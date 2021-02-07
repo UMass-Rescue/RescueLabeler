@@ -53,9 +53,9 @@ jobs:
     - name: "Sphinx autodoc"
       run: |
         pip install -U sphinx sphinx-autoapi
-        sphinx-build -v docs docs/html/
+        sphinx-build docs public -b dirhtml
     - name: Deploy Docs
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/html
+        publish_dir: public

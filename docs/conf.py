@@ -6,7 +6,7 @@ extensions = ["autoapi.extension"]
 templates_path = ["templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-html_theme = "classic"
+html_theme = "alabaster"
 
 autoapi_dirs = ["../labeler_api"]
 autoapi_keep_files = False

@@ -1,0 +1,29 @@
+:mod:`config`
+=============
+
+.. py:module:: config
+
+
+Module Contents
+---------------
+
+.. data:: PROJECT_NAME
+   
+
+   
+
+.. data:: VERSION
+   
+
+   
+
+.. data:: DEBUG
+   :annotation: = False
+
+   
+
+.. data:: API_PREFIX
+   
+
+   
+

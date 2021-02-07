@@ -1,0 +1,26 @@
+:mod:`labeler_api.main`
+=======================
+
+.. py:module:: labeler_api.main
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   labeler_api.main.get_application
+
+
+.. function:: get_application() -> FastAPI
+
+
+.. data:: app
+   
+
+   
+
