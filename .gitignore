@@ -4,3 +4,5 @@ htmlcov
 junit
 
 .coverage
+
+*.egg-info
