@@ -21,9 +21,6 @@ API Compose
 ```bash
 docker-compose -f docker-compose.api.yml build
 
-# Testing
-docker-compose -f docker-compose.api.yml run
-
 # Deployment
 docker-compose -f docker-compose.api.yml up
 ```
