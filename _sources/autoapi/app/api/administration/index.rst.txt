@@ -1,0 +1,14 @@
+:mod:`app.api.administration`
+=============================
+
+.. py:module:: app.api.administration
+
+
+Module Contents
+---------------
+
+.. data:: router
+   
+
+   
+

@@ -1,0 +1,14 @@
+:mod:`app.api.labeling`
+=======================
+
+.. py:module:: app.api.labeling
+
+
+Module Contents
+---------------
+
+.. data:: router
+   
+
+   
+

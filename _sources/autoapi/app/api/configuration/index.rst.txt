@@ -1,0 +1,14 @@
+:mod:`app.api.configuration`
+============================
+
+.. py:module:: app.api.configuration
+
+
+Module Contents
+---------------
+
+.. data:: router
+   
+
+   
+

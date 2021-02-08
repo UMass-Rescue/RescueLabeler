@@ -4,16 +4,19 @@
 .. py:module:: app.api
 
 
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   administration/index.rst
+   configuration/index.rst
+   labeling/index.rst
+
+
 Package Contents
 ----------------
-
-Classes
-~~~~~~~
-
-.. autoapisummary::
-
-   app.api.DBContextManager
-
 
 
 Functions
@@ -22,18 +25,6 @@ Functions
 .. autoapisummary::
 
    app.api.home
-   app.api.read_items
-   app.api.db_test
-
-
-.. class:: DBContextManager
-
-
-   .. method:: __enter__(self)
-
-
-   .. method:: __exit__(self, exc_type, exc_value, traceback)
-
 
 
 .. data:: logger
@@ -46,24 +37,9 @@ Functions
 
    
 
-.. data:: oauth2_scheme
-   
-
-   
-
 .. function:: home()
    :async:
 
    Default home route
-
-
-.. function:: read_items(token: str = Depends(oauth2_scheme))
-   :async:
-
-   TODO update
-
-
-.. function:: db_test()
-   :async:
 
 
