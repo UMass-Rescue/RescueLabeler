@@ -7,6 +7,14 @@
 Package Contents
 ----------------
 
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   app.api.DBContextManager
+
+
 
 Functions
 ~~~~~~~~~
@@ -15,7 +23,23 @@ Functions
 
    app.api.home
    app.api.read_items
+   app.api.db_test
 
+
+.. class:: DBContextManager
+
+
+   .. method:: __enter__(self)
+
+
+   .. method:: __exit__(self, exc_type, exc_value, traceback)
+
+
+
+.. data:: logger
+   
+
+   
 
 .. data:: router
    
@@ -37,5 +61,9 @@ Functions
    :async:
 
    TODO update
+
+
+.. function:: db_test()
+   :async:
 
 

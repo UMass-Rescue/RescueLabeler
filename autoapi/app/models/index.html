@@ -49,12 +49,29 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#app.models.LabelUser" title="app.models.LabelUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelUser</span></code></a></p></td>
 <td><p>Primary api user</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.models.LabelProject" title="app.models.LabelProject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelProject</span></code></a></p></td>
+<td><p>SqlAlchemy Base with override for tablename generation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.models.LabelSettings" title="app.models.LabelSettings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelSettings</span></code></a></p></td>
+<td><p>SqlAlchemy Base with override for tablename generation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#app.models.LabelStringData" title="app.models.LabelStringData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelStringData</span></code></a></p></td>
+<td><p>SqlAlchemy Base with override for tablename generation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#app.models.StringLabels" title="app.models.StringLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StringLabels</span></code></a></p></td>
+<td><p>SqlAlchemy Base with override for tablename generation</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="py class">
 <dt id="app.models.Base">
 <em class="property">class </em><code class="sig-prename descclassname">app.models.</code><code class="sig-name descname">Base</code><a class="headerlink" href="#app.models.Base" title="Permalink to this definition">¶</a></dt>
 <dd><p>SqlAlchemy Base with override for tablename generation</p>
+<dl class="py attribute">
+<dt id="app.models.Base.created_at">
+<code class="sig-name descname">created_at</code><a class="headerlink" href="#app.models.Base.created_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py attribute">
 <dt id="app.models.Base.__name__">
 <code class="sig-name descname">__name__</code><em class="property"> :str</em><a class="headerlink" href="#app.models.Base.__name__" title="Permalink to this definition">¶</a></dt>
@@ -120,6 +137,114 @@
 <dl class="py attribute">
 <dt id="app.models.LabelUser.is_superuser">
 <code class="sig-name descname">is_superuser</code><a class="headerlink" href="#app.models.LabelUser.is_superuser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.models.LabelProject">
+<em class="property">class </em><code class="sig-prename descclassname">app.models.</code><code class="sig-name descname">LabelProject</code><a class="headerlink" href="#app.models.LabelProject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../db/base_class/#app.db.base_class.Base" title="app.db.base_class.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.base_class.Base</span></code></a></p>
+<p>SqlAlchemy Base with override for tablename generation</p>
+<dl class="py attribute">
+<dt id="app.models.LabelProject.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#app.models.LabelProject.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelProject.project_name">
+<code class="sig-name descname">project_name</code><a class="headerlink" href="#app.models.LabelProject.project_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelProject.project_owner">
+<code class="sig-name descname">project_owner</code><a class="headerlink" href="#app.models.LabelProject.project_owner" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.models.LabelSettings">
+<em class="property">class </em><code class="sig-prename descclassname">app.models.</code><code class="sig-name descname">LabelSettings</code><a class="headerlink" href="#app.models.LabelSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../db/base_class/#app.db.base_class.Base" title="app.db.base_class.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.base_class.Base</span></code></a></p>
+<p>SqlAlchemy Base with override for tablename generation</p>
+<dl class="py attribute">
+<dt id="app.models.LabelSettings.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#app.models.LabelSettings.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelSettings.associated_project">
+<code class="sig-name descname">associated_project</code><a class="headerlink" href="#app.models.LabelSettings.associated_project" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelSettings.allow_duplicates">
+<code class="sig-name descname">allow_duplicates</code><a class="headerlink" href="#app.models.LabelSettings.allow_duplicates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelSettings.final_label_vote">
+<code class="sig-name descname">final_label_vote</code><a class="headerlink" href="#app.models.LabelSettings.final_label_vote" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelSettings.randomize">
+<code class="sig-name descname">randomize</code><a class="headerlink" href="#app.models.LabelSettings.randomize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelSettings.authorized_admin">
+<code class="sig-name descname">authorized_admin</code><a class="headerlink" href="#app.models.LabelSettings.authorized_admin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.models.LabelStringData">
+<em class="property">class </em><code class="sig-prename descclassname">app.models.</code><code class="sig-name descname">LabelStringData</code><a class="headerlink" href="#app.models.LabelStringData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../db/base_class/#app.db.base_class.Base" title="app.db.base_class.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.base_class.Base</span></code></a></p>
+<p>SqlAlchemy Base with override for tablename generation</p>
+<dl class="py attribute">
+<dt id="app.models.LabelStringData.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#app.models.LabelStringData.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelStringData.target_string">
+<code class="sig-name descname">target_string</code><a class="headerlink" href="#app.models.LabelStringData.target_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.LabelStringData.associated_project">
+<code class="sig-name descname">associated_project</code><a class="headerlink" href="#app.models.LabelStringData.associated_project" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.models.StringLabels">
+<em class="property">class </em><code class="sig-prename descclassname">app.models.</code><code class="sig-name descname">StringLabels</code><a class="headerlink" href="#app.models.StringLabels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../db/base_class/#app.db.base_class.Base" title="app.db.base_class.Base"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.base_class.Base</span></code></a></p>
+<p>SqlAlchemy Base with override for tablename generation</p>
+<dl class="py attribute">
+<dt id="app.models.StringLabels.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#app.models.StringLabels.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.StringLabels.string_data">
+<code class="sig-name descname">string_data</code><a class="headerlink" href="#app.models.StringLabels.string_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.StringLabels.labels">
+<code class="sig-name descname">labels</code><a class="headerlink" href="#app.models.StringLabels.labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.models.StringLabels.labeler_id">
+<code class="sig-name descname">labeler_id</code><a class="headerlink" href="#app.models.StringLabels.labeler_id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

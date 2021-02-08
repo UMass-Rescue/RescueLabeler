@@ -14,12 +14,21 @@ Classes
 
    app.models.Base
    app.models.LabelUser
+   app.models.LabelProject
+   app.models.LabelSettings
+   app.models.LabelStringData
+   app.models.StringLabels
 
 
 
 .. class:: Base
 
    SqlAlchemy Base with override for tablename generation
+
+   .. attribute:: created_at
+      
+
+      
 
    .. attribute:: __name__
       :annotation: :str
@@ -69,6 +78,114 @@ Classes
       
 
    .. attribute:: is_superuser
+      
+
+      
+
+
+.. class:: LabelProject
+
+   Bases: :class:`app.db.base_class.Base`
+
+   SqlAlchemy Base with override for tablename generation
+
+   .. attribute:: id
+      
+
+      
+
+   .. attribute:: project_name
+      
+
+      
+
+   .. attribute:: project_owner
+      
+
+      
+
+
+.. class:: LabelSettings
+
+   Bases: :class:`app.db.base_class.Base`
+
+   SqlAlchemy Base with override for tablename generation
+
+   .. attribute:: id
+      
+
+      
+
+   .. attribute:: associated_project
+      
+
+      
+
+   .. attribute:: allow_duplicates
+      
+
+      
+
+   .. attribute:: final_label_vote
+      
+
+      
+
+   .. attribute:: randomize
+      
+
+      
+
+   .. attribute:: authorized_admin
+      
+
+      
+
+
+.. class:: LabelStringData
+
+   Bases: :class:`app.db.base_class.Base`
+
+   SqlAlchemy Base with override for tablename generation
+
+   .. attribute:: id
+      
+
+      
+
+   .. attribute:: target_string
+      
+
+      
+
+   .. attribute:: associated_project
+      
+
+      
+
+
+.. class:: StringLabels
+
+   Bases: :class:`app.db.base_class.Base`
+
+   SqlAlchemy Base with override for tablename generation
+
+   .. attribute:: id
+      
+
+      
+
+   .. attribute:: string_data
+      
+
+      
+
+   .. attribute:: labels
+      
+
+      
+
+   .. attribute:: labeler_id
       
 
       

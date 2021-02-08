@@ -39,6 +39,11 @@ Functions
 
    SqlAlchemy Base with override for tablename generation
 
+   .. attribute:: created_at
+      
+
+      
+
    .. attribute:: __name__
       :annotation: :str
 
